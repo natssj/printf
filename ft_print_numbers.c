@@ -57,3 +57,23 @@ int	print_hexaupper(unsigned int nbr)
 	len++;
 	return (len);
 }
+
+int	print_pointer(void *ptr)
+{
+	int				len;
+	unsigned long	new_ptr;
+
+	len = 0;
+	new_ptr = (unsigned long)ptr;
+	if (new_ptr == 0)
+	{
+		write(1, "(nil)", 5);
+		len = 5;
+	}
+	else
+	{
+		write(1, "0x", 2);
+		len = 2 + print_hexapointer(new_ptr);
+	}
+	return (len);
+}
