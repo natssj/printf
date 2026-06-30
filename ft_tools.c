@@ -40,3 +40,42 @@ int	print_hexapointer(unsigned long nbr)
 	len++;
 	return (len);
 }
+
+int	ft_intlen(int nbr)
+{
+	int		len;
+	long	num;
+
+	len = 0;
+	num = nbr;
+	if (num == 0)
+		return (1);
+	if (num < 0)
+	{
+		num = -num;
+		len++;
+	}
+	while (num > 0)
+	{
+		num = num / 10;
+		len++;
+	}
+	return (len);
+}
+
+int	ft_unsignedintlen(unsigned int nbr)
+{
+	unsigned int	len;
+
+	len = 0;
+	if (nbr == 0)
+		return (1);
+	while (nbr > 0)
+	{
+		nbr = nbr / 10;
+		len++;
+	}
+	return (len);
+}
+	return (len);
+}
