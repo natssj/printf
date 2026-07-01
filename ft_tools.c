@@ -77,5 +77,3 @@ int	ft_unsignedintlen(unsigned int nbr)
 	}
 	return (len);
 }
-	return (len);
-}
